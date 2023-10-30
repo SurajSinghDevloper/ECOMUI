@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import ProductCard from "./ProductCard";
 import Footer from "./Footer";
+import LoginSignup from "../Authentication/LoginSignup";
 
 const products = [
   {
@@ -19,6 +20,7 @@ const products = [
 
 function Home() {
   return (
+    <>
     <div>
       <Header />
       <main className="container mx-auto p-4">
@@ -29,8 +31,10 @@ function Home() {
           ))}
         </div>
       </main>
-      <Footer />
+      
     </div>
+    <Footer />
+    </>
   );
 }
 

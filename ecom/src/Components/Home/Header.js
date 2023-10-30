@@ -1,18 +1,18 @@
 // Navbar.js
 import React, { useState } from 'react';
-import LoginModal from '../Authentication/Login';
+import LoginSignup from '../Authentication/LoginSignup';
 
 const Navbar = () => {
 
-    const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false);
 
-    const openLoginModal = () => {
-      setLoginModalOpen(true);
-    };
-  
-    const closeLoginModal = () => {
-      setLoginModalOpen(false);
-    };
+  const openLoginModal = () => {
+    setLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setLoginModalOpen(false);
+  };
 
   return (
     <nav className="bg-blue-500 p-4">
@@ -33,10 +33,10 @@ const Navbar = () => {
               <a href="#" className="text-white hover:text-gray-200">Contact</a>
             </li>
             <li>
-              <a href="#" onClick={openLoginModal} className="text-white hover:text-gray-200">Login</a>
+            <a href="#" onClick={openLoginModal} className="text-white hover:text-gray-200">Login</a>
             </li>
           </ul>
-          <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />
+          <LoginSignup isOpen={isLoginModalOpen} onClose={closeLoginModal} />
         </div>
       </div>
     </nav>
